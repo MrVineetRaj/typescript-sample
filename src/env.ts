@@ -1,10 +1,10 @@
-import "dotenv/config";
-import { z } from "zod";
+import 'dotenv/config';
+import { z } from 'zod';
 const envSchema = z.object({
   PORT: z.string().optional(),
   NODE_ENV: z
-    .enum(["development", "production", "test"])
-    .default("development"),
+    .enum(['development', 'production', 'test'])
+    .default('development'),
 });
 
 function createEnv(env: NodeJS.ProcessEnv) {
